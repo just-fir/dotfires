@@ -1,0 +1,75 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+${custom.arduino}\
+$crystal\
+$rust\
+$typst\
+$cmd_duration\
+$line_break\
+$python\
+$character"""
+
+[username]
+show_always = true
+format = '[$user](cyan)'
+aliases = {"fir" = "Fir"}
+
+[hostname]
+ssh_only = false
+format = '[@$hostname](dimmed cyan)[$ssh_symbol](dimmed) '
+
+[directory]
+style = "foreground"
+
+[character]
+success_symbol = "[\\$](bold yellow)"
+error_symbol = "[!](red)"
+vimcmd_symbol = "[:](green)"
+
+[git_branch]
+format = "[$branch](bold yellow)"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](yellow) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "dim-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+detect_extensions = []
+detect_files = []
+
+[rust]
+format = "[](red) "
+
+[typst]
+format = "[](blue) "
+
+[crystal]
+format = "[](black) "
+
+[custom.arduino]
+when = ''' test $(ls -1 *.ino 2>/dev/null | wc -l) != 0 '''
+format = "[](cyan) "

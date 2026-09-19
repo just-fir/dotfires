@@ -1,0 +1,77 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "markdown_preview_font_family": "Sura",
+  "ui_font_family": "Sura",
+  "buffer_font_family": "Geist Mono",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "terminal": {
+    "shell": {
+         "program": "fish"
+    },
+  },
+  "cli_default_open_behavior": "existing_window",
+  "lsp_document_colors": "background",
+  "lsp": {
+    "tinymist": {
+			"initialization_options": {
+				"preview": {
+					"background": {
+						"enabled": true,
+					},
+				}
+			}
+		},
+		"languagetool": {
+      "initialization_options": {
+        "backend": { "type": "local", "url": "http://localhost:8081" },
+        "language": "pt-PT",
+        "checkOnSave": true,
+        "checkWhileTyping": false
+      }
+    }
+	},
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "base_keymap": "Zed",
+  "helix_mode": false,
+  "disable_ai": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Fresco Snowflake",
+    "dark": "Fresco Frostbite",
+  },
+  "languages": {
+    "Crystal": {
+      "language_servers": ["ameba-ls"],
+      "formatter": {
+        "external": {
+          "command": "crystal",
+          "arguments": ["tool", "format", "-"],
+        },
+      },
+      "format_on_save": "on",
+    },
+		"Typst": {
+		  "language_servers": ["tinymist", "languagetool"]
+		}
+  }
+}
