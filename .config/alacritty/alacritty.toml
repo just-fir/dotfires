@@ -1,0 +1,15 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/fresco_frostbite.toml"
+]
+
+[terminal.shell]
+program = "/usr/bin/fish"
+
+[window]
+padding = {x=10, y=10}
+opacity = 0.95
+blur = true
+
+[font]
+normal = { family = "GeistMono NFM", style = "Regular" }

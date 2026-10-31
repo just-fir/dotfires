@@ -3,18 +3,21 @@
   "logo": {
     "type": "small",
     "color":{
-      "1": "blue"
+      "1": "yellow"
     },
     "padding": {
       "top": 1,
-      "left": 1
+      "left": 1,
+      "right": 2
     }
   },
   "display": {
-      "separator": " ",
-      "constants": [
-          "──────────────────────────────"
-      ]
+    "brightColor": false,
+    "color": {
+      "keys": "bright_cyan",
+      "title": "blue"
+    },
+    "separator": " "
   },
   "modules": [
     "title",

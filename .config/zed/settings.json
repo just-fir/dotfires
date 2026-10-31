@@ -7,7 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "markdown_preview_font_family": "Sura",
+  "markdown_preview": {
+    "font_family": "Sura"
+  },
+  "git_panel": {
+    "group_by": "none",
+    "dock": "right",
+    "tree_view": true
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "project_panel": {
+    "button": true
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": false,
+    "active_language_button": true
+  },
+  "title_bar": {
+    "show_branch_status_icon": false,
+    "show_sign_in": false
+  },
   "ui_font_family": "Sura",
   "buffer_font_family": "Geist Mono",
   "icon_theme": {
@@ -27,19 +49,11 @@
 			"initialization_options": {
 				"preview": {
 					"background": {
-						"enabled": true,
+						"enabled": false,
 					},
 				}
 			}
-		},
-		"languagetool": {
-      "initialization_options": {
-        "backend": { "type": "local", "url": "http://localhost:8081" },
-        "language": "pt-PT",
-        "checkOnSave": true,
-        "checkWhileTyping": false
-      }
-    }
+		}
 	},
   "telemetry": {
     "diagnostics": false,
@@ -70,8 +84,19 @@
       },
       "format_on_save": "on",
     },
-		"Typst": {
-		  "language_servers": ["tinymist", "languagetool"]
+    "Python": {
+      "language_servers": [
+        "ty",
+        "!basedpyright",
+        "!pylsp",
+        "ruff"
+      ]
+    },
+    "Typst": {
+		  "language_servers": ["tinymist"]
+		},
+		"Markdown": {
+		  "language_servers": ["color-lsp"]
 		}
   }
 }
