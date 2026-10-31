@@ -9,11 +9,11 @@ $git_state\
 $git_status\
 ${custom.arduino}\
 $crystal\
+$python\
 $rust\
 $typst\
 $cmd_duration\
 $line_break\
-$python\
 $character"""
 
 [username]
@@ -56,10 +56,7 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
-detect_extensions = []
-detect_files = []
+format = "[ $virtualenv](bright_yellow)"
 
 [rust]
 format = "[](red) "
