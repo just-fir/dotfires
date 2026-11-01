@@ -23,7 +23,7 @@ aliases = {"fir" = "Fir"}
 
 [hostname]
 ssh_only = false
-format = '[@$hostname](dimmed cyan)[$ssh_symbol](dimmed) '
+format = '[@$hostname](black)[$ssh_symbol](dimmed) '
 
 [directory]
 style = "foreground"
@@ -56,13 +56,13 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [python]
-format = "[ $virtualenv](bright_yellow)"
+format = "[ $virtualenv](blue)"
 
 [rust]
 format = "[](red) "
 
 [typst]
-format = "[](blue) "
+format = "[](cyan) "
 
 [crystal]
 format = "[](black) "

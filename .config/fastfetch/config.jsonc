@@ -6,7 +6,7 @@
       "1": "yellow"
     },
     "padding": {
-      "top": 1,
+      "top": 3,
       "left": 1,
       "right": 2
     }
@@ -14,13 +14,17 @@
   "display": {
     "brightColor": false,
     "color": {
-      "keys": "bright_cyan",
-      "title": "blue"
+      "keys": "blue"
     },
     "separator": " "
   },
   "modules": [
-    "title",
+    "break",
+    "break",
+    {
+      "key": "{#0}{#36}Fir{#30}@fred",
+      "type": "custom"
+    },
     "break",
     {
       "type":"os",
@@ -51,6 +55,8 @@
       "key": "󰔚"
     },
     "break",
-    "colors"
+    "colors",
+    "break",
+    "break"
   ]
 }
