@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Arduino: Compile and Upload for UNO (-like...)",
+    "command": "cd $ZED_RELATIVE_DIR && arduino-cli compile -b arduino:avr:uno && arduino-cli upload -b arduino:avr:uno -p /dev/ttyUSB0",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+  {
+    "label": "Arduino: Verify code (compile)",
+    "command": "cd $ZED_RELATIVE_DIR && arduino-cli compile -b arduino:avr:uno",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+  {
+    "label": "Arduino: Open 9600-baud Serial Monitor",
+    "command": "stty -F /dev/ttyUSB0 9600 && screen /dev/ttyUSB0 9600",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  }
+]

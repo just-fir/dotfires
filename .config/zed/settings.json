@@ -53,6 +53,11 @@
 					},
 				}
 			}
+		},
+		"arduino-language-server": {
+		  "settings": {
+				"autoCreateConfig": true,
+			},
 		}
 	},
   "telemetry": {
@@ -97,6 +102,9 @@
 		},
 		"Markdown": {
 		  "language_servers": ["color-lsp"]
+		},
+		"Arduino": {
+		  "language_servers": ["arduino-language-server"]
 		}
   }
 }
